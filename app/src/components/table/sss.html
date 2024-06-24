@@ -1,0 +1,129 @@
+<!doctype html>
+<head>
+   <meta HTTP-EQUIV="content-type" content="text/html; charset=UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>QR Code Registration</title>
+   <style type="text/css">
+      * { 
+      font-size:14px;
+      }
+      body {
+      font-family: "Open Sans", sans-serif;
+      background: #f5f7ed;
+      padding: 0;
+      margin: 0;
+      }
+      header.main-header {
+      text-align: center;
+      background: #344c38;
+      padding: 10px 5px;
+      }
+      header.main-header img {
+      max-width: 100px;
+      }
+      .formContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      max-width: 100%;
+      padding: 20px;
+      }
+      li {
+      display: block;
+      align-items: center;
+      color: #333;
+      background: #FFF;
+      font-weight: 600;
+      border-radius: 10px;    
+      margin-bottom: 10px;
+      padding: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,.1);
+      }
+      .textField, textarea, label {
+      display:block;      
+      }
+      label {    
+      margin-bottom: 10px;
+      }
+      input, textarea {
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      }
+      .saveButton {
+      color: #fff;
+      border-color: #309c42;
+      border-radius: 100px;
+      font-size: 18px;
+      font-weight: 500;
+      background-color: #309c42;
+      padding: 15px 8px;
+      }
+      .textField {	
+      width: 99%;
+      }
+      textarea {
+      max-width: 99%;      
+      }
+   </style>
+   <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log('getting the geo codes');
+        navigator.geolocation.getCurrentPosition((loc) => {
+          console.log('The location in lat lng format is: [', loc.coords.latitude, ',', loc.coords.longitude, ']');
+          //alert(`The location in lat lng format is: [${loc.coords.latitude},${loc.coords.longitude}]`);
+          document.getElementById('lat').setAttribute('value',loc.coords.latitude);
+          document.getElementById('lng').setAttribute('value',loc.coords.longitude);
+        }
+        ,(error) => {
+          alert('error'+error.code);
+          switch(error.code) {
+            case error.PERMISSION_DENIED:
+              alert("User denied the request for Geolocation.");
+              break;
+            case error.POSITION_UNAVAILABLE:
+              alert("Location information is unavailable.");
+              break;
+            case error.TIMEOUT:
+              alert("The request to get user location timed out.");
+              break;
+            case error.UNKNOWN_ERROR:
+              alert("An unknown error occurred.");
+              break;
+          }
+        });
+      });
+   </script>
+</head>
+<body>
+   <header class="main-header">
+      <img src="https://p9m3u3f2.rocketcdn.me/wp-content/uploads/2022/09/aptive-registered-logo-white.svg" alt="Aptive Logo" />
+   </header>
+   <form method=POST action="/2060389586812226">
+      <ul class="formContainer">
+         <li>
+            <label for="aptiveId">Aptive ID</label>
+            <input class="textField" type=text name="aptiveId" value="">
+         </li>
+         <li>
+            <label for="customerId">Customer ID</label>
+            <input class="textField" type=text name="customerId" value="">
+         </li>
+         <li>
+            <label for="lat">Latitude</label>
+            <input class="textField" type=text name="lat" value="" id ="lat">
+         </li>
+         <li>
+            <label for="lng">Longitude</label>
+            <input class="textField" type=text name="lng" value="" id ="lng">
+         </li>
+         <li>
+            <label for="notes">Notes</label>    
+            <textarea class="textField" name="notes"></textarea>
+         </li>
+         <input class="saveButton" type=submit value="Save">  
+      </ul>
+   </form>
+</body>
+</html>

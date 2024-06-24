@@ -1,0 +1,25 @@
+.confirmButton {
+  border-radius: 6px;
+  background-color: #344c38;
+  border-color: #344c38;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  padding: 11px 24px;
+  margin-top: 40px;
+  width: 100%;
+
+  &:disabled {
+    background-color: rgb(156, 163, 175, 0.7);
+    border-color: rgb(156, 163, 175, 0.7);
+  }
+
+  .selectedSpotLabel {
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}

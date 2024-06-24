@@ -1,0 +1,27 @@
+version: "3.8"
+
+networks:
+  chd-network:
+
+volumes:
+    node_modules:
+
+services:
+
+    chd-react:
+        stdin_open: true
+        container_name: chd-react
+        command: "sh entrypoint.sh"
+        build:
+            context: .
+            dockerfile: ./docker/node/Dockerfile
+        ports:
+            - "8000:8000"
+        volumes:
+            # Store the node modules folder in a volume for performance
+            - node_modules:/app/node_modules
+            - "./app/:/app"
+        networks:
+            - chd-network
+
+    

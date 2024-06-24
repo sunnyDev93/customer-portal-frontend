@@ -1,0 +1,468 @@
+import { InvoiceAttribute } from 'types/CustomerTypes';
+
+/**
+ * This file is used for defining the types of responses from API
+ * Ref: https://api.customer-portal.stg.goaptive.com/api/documentation#/
+ */
+
+export interface BaseDataResponse<T> {
+  id: number | string;
+  type: string;
+  attributes: T;
+}
+export interface BaseResponse<T> {
+  links: {
+    self: string;
+  };
+  data: T | [];
+}
+
+export interface CustomerInfoResponse {
+  name: string;
+  isPhoneNumberValid: boolean;
+  isEmailValid: boolean;
+  statusName: string;
+  autoPay: boolean;
+  officeId: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: string;
+  balanceCents: number;
+  isOnMonthlyBilling: boolean;
+  dueDate: string;
+  paymentProfileId: number;
+  autoPayProfileLastFour: string;
+  isDueForStandardTreatment: boolean;
+  lastTreatmentDate: string;
+  subscription: CustomerSubscription;
+  currentPlan: CustomerCurrentPlan;
+}
+export interface CustomerCurrentPlan {
+  name: string;
+  included_products: string[];
+  subscription_start: string;
+  subscription_end: string;
+}
+
+export interface CustomerAutoPaySettingsResponse {
+  links: {
+    self: string;
+  };
+  data: {
+    id: number;
+    type: string;
+    attributes: CustomerAutoPaySettingsResponseAttributes;
+  }[];
+}
+
+export interface CustomerAutoPaySettingsResponseAttributes {
+  isEnabled: boolean;
+  planName: string;
+  nextPaymentAmount: number;
+  nextPaymentDate: string;
+  cardType: string;
+  cardLastFour: string;
+  preferredBillingDate: string;
+}
+
+export interface CustomerPaymentProfileResponse {
+  data: {
+    [paymentProfileId: string]: CustomerPaymentProfile;
+  };
+}
+
+export interface CustomerPaymentProfileResponseV2 {
+  data: CustomerPaymentProfileV2[];
+}
+
+export interface CustomerPaymentProfileV2 {
+  payment_method_id: string;
+  crm_account_id: string;
+  type: string;
+  date_added: string;
+  cc_last_four: string;
+  cc_expiration_month: number;
+  cc_expiration_year: number;
+  is_primary: boolean;
+  description: string;
+  is_expired: boolean;
+  is_autopay: boolean;
+  ach_account_last_four: string;
+  ach_routing_number: string;
+  ach_account_type: string;
+  ach_bank_name: string;
+  cc_type: string;
+}
+
+export interface CustomerPaymentProfile {
+  accountNumber: string;
+  accountType: number;
+  bankName: string;
+  billingAddress1: string;
+  billingAddress2: string;
+  billingCity: string;
+  billingEmail: string;
+  billingPhone: string;
+  billingState: string;
+  billingZip: string;
+  billingName: string;
+  cardType: string;
+  checkType: number;
+  customerID: string;
+  description: string;
+  id: number;
+  isExpired: boolean | null;
+  lastFour: string;
+  merchantID: string;
+  paymentMethod: number;
+  routingNumber: string;
+  status: number;
+}
+
+export interface CreateCustomerPaymentResponse {
+  id: number;
+  customer_id: number;
+  amount_cents: number;
+  payment_method: string;
+  date: string;
+}
+
+export type CustomerUpcomingAppointmentResponse = BaseResponse<BaseDataResponse<Appointment[]>>;
+
+export interface Appointment {
+  additionalTechs: string[];
+  amountCollected: number;
+  appointmentNotes: string;
+  assignedTech: number;
+  callAhead: number;
+  canBeCanceled: boolean;
+  canBeRescheduled: boolean;
+  cancellationReason: string;
+  cancelledBy: number;
+  checkIn: string;
+  checkOut: string;
+  completedBy: number;
+  customerId: number;
+  dateAdded: Date;
+  dateCancelled: Date;
+  dateCompleted: Date;
+  dateUpdated: Date;
+  doInterior: boolean;
+  duration: string;
+  employeeId: number;
+  end: Date;
+  id: number | string;
+  isInitial: boolean;
+  latIn: number;
+  latOut: number;
+  lockedBy: number;
+  longIn: number;
+  longOut: number;
+  notes: string;
+  officeId: number;
+  officeNotes: string;
+  paymentMethod: number;
+  rescheduleMessage: string;
+  routeId: number;
+  sequence: number;
+  serviceTypeId: number;
+  serviceTypeName: string;
+  servicedBy: number;
+  servicedInterior: number;
+  spotId: number;
+  start: Date;
+  scheduledStartTime: Date;
+  status: number;
+  subscriptionId: number;
+  subscriptionRegionId: number;
+  targetPests: number[];
+  temperature: number;
+  ticketId: number;
+  timeIn: Date;
+  timeOut: Date;
+  timeWindow: string;
+  unitIds: number[];
+  windDirection: string;
+  windSpeed: number;
+}
+
+export type CustomerSpotsResponse = BaseResponse<BaseDataResponse<Spot[]>>;
+
+export interface Spot {
+  date: Date;
+  time: string;
+}
+
+export interface InvoiceType {
+  attributes: InvoiceAttribute;
+  id: number;
+  type: string;
+}
+
+export interface InvoiceAttributes {
+  customerId: number;
+  billToAccountId: number;
+  officeId: number;
+  dateCreated: string;
+  invoiceDate: string;
+  dateUpdated: string;
+  active: number;
+  subTotal: number;
+  taxAmount: number;
+  total: number;
+  serviceCharge: number;
+  isServiceTaxable: boolean;
+  productionValue: number;
+  taxRate: number;
+  appointmentId: number;
+  balance: number;
+  subscriptionId: null;
+  autoGenerated: null;
+  autoGeneratedType: string;
+  renewalId: null;
+  serviceId: number;
+  items: any[];
+  invoiceNumber: number;
+  templateType: string;
+  glNumber: null;
+}
+
+export interface InvoiceResponse {
+  type: string;
+  id: string;
+  attributes: InvoiceAttributes;
+}
+export interface Subscription {
+  type: string;
+  id: string;
+  attributes: SubscriptionAttributes;
+}
+
+export interface SubscriptionAttributes {
+  customerId: number;
+  billToAccountId: number;
+  officeId: number;
+  serviceId: number;
+  billingFrequency: number;
+  frequency: number;
+  followupService: number;
+  agreementLength: number;
+  soldById: number;
+  annualRecurringServiceCount: number;
+  regionId: null;
+  renewalFrequency: number;
+  duration: number;
+  sourceId: null;
+  initialStatus: number;
+  initialAppointmentId: number;
+  addedBy: number;
+  soldBy2Id: null;
+  soldBy3Id: null;
+  preferredTechId: null;
+  sentriconSiteId: null;
+  lastAppointmentId: number;
+  leadId: null;
+  leadAddedBy: null;
+  leadSourceId: null;
+  leadStatus: null;
+  leadStageId: null;
+  leadAssignedTo: null;
+  initialQuote: number;
+  initialDiscount: number;
+  initialServiceTotal: number;
+  yifDiscount: number;
+  recurringCharge: number;
+  contractValue: number;
+  maxMonthlyCharge: number;
+  leadValue: null;
+  isActive: boolean;
+  sentriconConnected: null;
+  statusText: string;
+  serviceType: string;
+  initialStatusText: string;
+  cancellingNotes: string;
+  preferredStart: null;
+  preferredEnd: null;
+  subscriptionLink: null;
+  source: null;
+  leadStage: null;
+  leadLostReason: null;
+  leadSource: null;
+  addOns: any[];
+  unitIds: any[];
+  appointmentIds: number[];
+  completedAppointmentIds: number[];
+  dateAdded: string;
+  dateUpdated: string;
+  nextServiceDate: string;
+  nextBillingDate: string;
+  dateCancelled: string;
+  contractAdded: null;
+  lastServiceCompleted: string;
+  leadDateAssigned: null;
+  leadDateAdded: null;
+  leadUpdated: null;
+  leadDateClosed: null;
+  initialBillingDate: string;
+  renewalDate: string;
+  customDate: null;
+  seasonalStart: null;
+  seasonalEnd: null;
+  expirationDate: null;
+  recurringTicket: RecurringTicket;
+  initialInvoice: string;
+  preferredDay: null;
+  cancellationNotes: any[];
+}
+
+export interface RecurringTicket {
+  id: number;
+  customerId: number;
+  billToAccountId: number;
+  officeId: number;
+  dateCreated: DateCreated;
+  invoiceDate: DateCreated;
+  dateUpdated: DateCreated;
+  active: number;
+  subTotal: number;
+  taxAmount: number;
+  total: number;
+  serviceCharge: number;
+  isServiceTaxable: boolean;
+  productionValue: number;
+  taxRate: number;
+  appointmentId: null;
+  balance: number;
+  subscriptionId: number;
+  autoGenerated: null;
+  autoGeneratedType: string;
+  renewalId: null;
+  serviceId: number;
+  items: any[];
+  invoiceNumber: number;
+  templateType: string;
+  glNumber: null;
+}
+
+export interface DateCreated {
+  date: Date;
+  timezone_type: number;
+  timezone: string;
+}
+
+export interface DocumentAttributes {
+  officeId: number;
+  customerId: number;
+  dateAdded: Date;
+  addedBy: number;
+  showCustomer: boolean;
+  showTech: boolean;
+  appointmentId: number;
+  prefix: string;
+  description?: string;
+  formDescription?: string;
+  documentLink: string;
+}
+export interface DocumentResponse {
+  attributes: DocumentAttributes;
+  id: string;
+  type: string;
+}
+
+export type CustomerDocumentResponse = BaseResponse<DocumentResponse[]>;
+
+export interface CustomerBillingInfoResponse {
+  uri: string;
+}
+
+export interface TokenexCustomerBillingInfoResponse {
+  payment_method_id: number;
+  pestroutes_payment_profile_id: number;
+  message: string;
+}
+
+export type SpotWindow = 'AM' | 'PM';
+export type CustomerSpot = {
+  id: string;
+  type: string;
+  attributes: {
+    date: string;
+    window: string;
+    is_aro_spot: boolean;
+  };
+};
+export type ScheduleAppointmentRequest = {
+  spotId: string;
+  window: string;
+  isAroSpot: boolean;
+  notes?: string;
+};
+
+export type PaymentServiceAuthTokenResponse = {
+  status: number;
+  data: {
+    authentication_key: string;
+  };
+};
+
+export type CustomerSubscription = {
+  id: number;
+  serviceType: string;
+  pricePerTreatment: number;
+  agreementDate: string | null;
+  agreementLength: number;
+  specialtyPests: { [key: number]: string };
+  isUpgradeAvailable: boolean;
+};
+
+export type CustomerProductAttribute = {
+  name: string;
+  image: string;
+  is_recurring: boolean;
+  initial_price: number;
+  recurring_price: number;
+  pest_routes_id: number;
+};
+export type ProductResponse = {
+  is_recurring: any;
+  attributes: CustomerProductAttribute;
+  id: string;
+  type: string;
+};
+export type CustomerProductResponse = ProductResponse[];
+
+export type PlanResponse = {
+  type: string;
+  id: string;
+  attributes: PlanAttributes;
+};
+
+export type PlanAttributes = {
+  plan_id: number;
+  is_current_plan: boolean;
+  name: string;
+  frequency: string;
+  order: number;
+  initial_price: number;
+  recurring_price: number;
+  agreement_length: string;
+  products: number[];
+  addons: Addon[];
+};
+
+export type Addon = {
+  type: string;
+  id: string;
+  attributes: AddonAttributes;
+};
+
+export type AddonAttributes = {
+  addon_id: number;
+  product_id: number;
+  initial_price: number;
+  recurring_price: number;
+  purchased?: boolean;
+};
+
+export type CustomerProductUpgradesResponse = PlanResponse[];

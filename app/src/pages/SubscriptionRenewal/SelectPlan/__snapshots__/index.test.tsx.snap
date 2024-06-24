@@ -1,0 +1,384 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectPlan renders the component and triggers next on button click 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="h-full w-full"
+      >
+        <div
+          class="w-full flex justify-start items-end"
+        >
+          <div
+            class="flex-shrink-0 mr-5"
+          >
+            <h5
+              class="mt-6 text-[24px] leading-[31px] font-GTSuper text-gray-500 italic"
+            >
+              Select a plan
+            </h5>
+            <p
+              class="mt-4 text-gray-900 italic"
+            >
+              All plans come with the following...
+            </p>
+          </div>
+          <div
+            class="w-full flex justify-start items-end flex-wrap"
+          >
+            <div
+              class="flex justify-start items-center mr-4"
+              data-testid="plan-category"
+            >
+              <svg
+                class="mr-[8px]"
+                fill="none"
+                height="14"
+                viewBox="0 0 15 14"
+                width="15"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.14111 13.355C6.64404 13.355 7.02979 13.1572 7.29834 12.7617L14.1172 2.32471C14.21 2.17822 14.2783 2.03662 14.3223 1.8999C14.3662 1.76318 14.3882 1.63135 14.3882 1.50439C14.3882 1.1626 14.2734 0.879395 14.0439 0.654785C13.8145 0.430176 13.5239 0.317871 13.1724 0.317871C12.9331 0.317871 12.7305 0.366699 12.5645 0.464355C12.4033 0.557129 12.2471 0.718262 12.0957 0.947754L6.11182 10.4033L3.06494 6.63135C2.80615 6.31396 2.48145 6.15527 2.09082 6.15527C1.73926 6.15527 1.44629 6.27002 1.21191 6.49951C0.982422 6.72412 0.867676 7.00977 0.867676 7.35645C0.867676 7.50781 0.894531 7.6543 0.948242 7.7959C1.00195 7.9375 1.09473 8.08398 1.22656 8.23535L5.00586 12.813C5.30859 13.1743 5.68701 13.355 6.14111 13.355Z"
+                  fill="#8D9886"
+                />
+              </svg>
+              <span
+                class="text-[12px] font-bold"
+              >
+                All General Pests
+              </span>
+            </div>
+            <div
+              class="flex justify-start items-center mr-4"
+              data-testid="plan-category"
+            >
+              <svg
+                class="mr-[8px]"
+                fill="none"
+                height="14"
+                viewBox="0 0 15 14"
+                width="15"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.14111 13.355C6.64404 13.355 7.02979 13.1572 7.29834 12.7617L14.1172 2.32471C14.21 2.17822 14.2783 2.03662 14.3223 1.8999C14.3662 1.76318 14.3882 1.63135 14.3882 1.50439C14.3882 1.1626 14.2734 0.879395 14.0439 0.654785C13.8145 0.430176 13.5239 0.317871 13.1724 0.317871C12.9331 0.317871 12.7305 0.366699 12.5645 0.464355C12.4033 0.557129 12.2471 0.718262 12.0957 0.947754L6.11182 10.4033L3.06494 6.63135C2.80615 6.31396 2.48145 6.15527 2.09082 6.15527C1.73926 6.15527 1.44629 6.27002 1.21191 6.49951C0.982422 6.72412 0.867676 7.00977 0.867676 7.35645C0.867676 7.50781 0.894531 7.6543 0.948242 7.7959C1.00195 7.9375 1.09473 8.08398 1.22656 8.23535L5.00586 12.813C5.30859 13.1743 5.68701 13.355 6.14111 13.355Z"
+                  fill="#8D9886"
+                />
+              </svg>
+              <span
+                class="text-[12px] font-bold"
+              >
+                Interior & Exterior
+              </span>
+            </div>
+            <div
+              class="flex justify-start items-center mr-4"
+              data-testid="plan-category"
+            >
+              <svg
+                class="mr-[8px]"
+                fill="none"
+                height="14"
+                viewBox="0 0 15 14"
+                width="15"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.14111 13.355C6.64404 13.355 7.02979 13.1572 7.29834 12.7617L14.1172 2.32471C14.21 2.17822 14.2783 2.03662 14.3223 1.8999C14.3662 1.76318 14.3882 1.63135 14.3882 1.50439C14.3882 1.1626 14.2734 0.879395 14.0439 0.654785C13.8145 0.430176 13.5239 0.317871 13.1724 0.317871C12.9331 0.317871 12.7305 0.366699 12.5645 0.464355C12.4033 0.557129 12.2471 0.718262 12.0957 0.947754L6.11182 10.4033L3.06494 6.63135C2.80615 6.31396 2.48145 6.15527 2.09082 6.15527C1.73926 6.15527 1.44629 6.27002 1.21191 6.49951C0.982422 6.72412 0.867676 7.00977 0.867676 7.35645C0.867676 7.50781 0.894531 7.6543 0.948242 7.7959C1.00195 7.9375 1.09473 8.08398 1.22656 8.23535L5.00586 12.813C5.30859 13.1743 5.68701 13.355 6.14111 13.355Z"
+                  fill="#8D9886"
+                />
+              </svg>
+              <span
+                class="text-[12px] font-bold"
+              >
+                Eaves
+              </span>
+            </div>
+            <div
+              class="flex justify-start items-center mr-4"
+              data-testid="plan-category"
+            >
+              <svg
+                class="mr-[8px]"
+                fill="none"
+                height="14"
+                viewBox="0 0 15 14"
+                width="15"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.14111 13.355C6.64404 13.355 7.02979 13.1572 7.29834 12.7617L14.1172 2.32471C14.21 2.17822 14.2783 2.03662 14.3223 1.8999C14.3662 1.76318 14.3882 1.63135 14.3882 1.50439C14.3882 1.1626 14.2734 0.879395 14.0439 0.654785C13.8145 0.430176 13.5239 0.317871 13.1724 0.317871C12.9331 0.317871 12.7305 0.366699 12.5645 0.464355C12.4033 0.557129 12.2471 0.718262 12.0957 0.947754L6.11182 10.4033L3.06494 6.63135C2.80615 6.31396 2.48145 6.15527 2.09082 6.15527C1.73926 6.15527 1.44629 6.27002 1.21191 6.49951C0.982422 6.72412 0.867676 7.00977 0.867676 7.35645C0.867676 7.50781 0.894531 7.6543 0.948242 7.7959C1.00195 7.9375 1.09473 8.08398 1.22656 8.23535L5.00586 12.813C5.30859 13.1743 5.68701 13.355 6.14111 13.355Z"
+                  fill="#8D9886"
+                />
+              </svg>
+              <span
+                class="text-[12px] font-bold"
+              >
+                Re-services at no cost
+              </span>
+            </div>
+            <div
+              class="flex justify-start items-center mr-4"
+              data-testid="plan-category"
+            >
+              <svg
+                class="mr-[8px]"
+                fill="none"
+                height="14"
+                viewBox="0 0 15 14"
+                width="15"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.14111 13.355C6.64404 13.355 7.02979 13.1572 7.29834 12.7617L14.1172 2.32471C14.21 2.17822 14.2783 2.03662 14.3223 1.8999C14.3662 1.76318 14.3882 1.63135 14.3882 1.50439C14.3882 1.1626 14.2734 0.879395 14.0439 0.654785C13.8145 0.430176 13.5239 0.317871 13.1724 0.317871C12.9331 0.317871 12.7305 0.366699 12.5645 0.464355C12.4033 0.557129 12.2471 0.718262 12.0957 0.947754L6.11182 10.4033L3.06494 6.63135C2.80615 6.31396 2.48145 6.15527 2.09082 6.15527C1.73926 6.15527 1.44629 6.27002 1.21191 6.49951C0.982422 6.72412 0.867676 7.00977 0.867676 7.35645C0.867676 7.50781 0.894531 7.6543 0.948242 7.7959C1.00195 7.9375 1.09473 8.08398 1.22656 8.23535L5.00586 12.813C5.30859 13.1743 5.68701 13.355 6.14111 13.355Z"
+                  fill="#8D9886"
+                />
+              </svg>
+              <span
+                class="text-[12px] font-bold"
+              >
+                Foundation
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full flex flex-wrap gap-5 justify-center mt-6 mb-[15px]"
+        />
+        <div
+          class="w-full text-end text-[12px] italic text-[#6B7280]"
+        >
+          *Frequency of treatments will vary depending on time of year and other factors.
+        </div>
+        <div
+          class="w-full flex justify-center items-center"
+        >
+          <button
+            class="customButton text-white bg-aptive-900 hover:bg-gray-400 disabled:bg-gray-50 disabled:border-none disabled:text-gray-400 pt-2 pb-2 pl-6 pr-6 border text-sm rounded shadow-sm block text-center undefined"
+            data-testid="button"
+            type="submit"
+          >
+            Next: Select Additional Services
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="h-full w-full"
+    >
+      <div
+        class="w-full flex justify-start items-end"
+      >
+        <div
+          class="flex-shrink-0 mr-5"
+        >
+          <h5
+            class="mt-6 text-[24px] leading-[31px] font-GTSuper text-gray-500 italic"
+          >
+            Select a plan
+          </h5>
+          <p
+            class="mt-4 text-gray-900 italic"
+          >
+            All plans come with the following...
+          </p>
+        </div>
+        <div
+          class="w-full flex justify-start items-end flex-wrap"
+        >
+          <div
+            class="flex justify-start items-center mr-4"
+            data-testid="plan-category"
+          >
+            <svg
+              class="mr-[8px]"
+              fill="none"
+              height="14"
+              viewBox="0 0 15 14"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.14111 13.355C6.64404 13.355 7.02979 13.1572 7.29834 12.7617L14.1172 2.32471C14.21 2.17822 14.2783 2.03662 14.3223 1.8999C14.3662 1.76318 14.3882 1.63135 14.3882 1.50439C14.3882 1.1626 14.2734 0.879395 14.0439 0.654785C13.8145 0.430176 13.5239 0.317871 13.1724 0.317871C12.9331 0.317871 12.7305 0.366699 12.5645 0.464355C12.4033 0.557129 12.2471 0.718262 12.0957 0.947754L6.11182 10.4033L3.06494 6.63135C2.80615 6.31396 2.48145 6.15527 2.09082 6.15527C1.73926 6.15527 1.44629 6.27002 1.21191 6.49951C0.982422 6.72412 0.867676 7.00977 0.867676 7.35645C0.867676 7.50781 0.894531 7.6543 0.948242 7.7959C1.00195 7.9375 1.09473 8.08398 1.22656 8.23535L5.00586 12.813C5.30859 13.1743 5.68701 13.355 6.14111 13.355Z"
+                fill="#8D9886"
+              />
+            </svg>
+            <span
+              class="text-[12px] font-bold"
+            >
+              All General Pests
+            </span>
+          </div>
+          <div
+            class="flex justify-start items-center mr-4"
+            data-testid="plan-category"
+          >
+            <svg
+              class="mr-[8px]"
+              fill="none"
+              height="14"
+              viewBox="0 0 15 14"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.14111 13.355C6.64404 13.355 7.02979 13.1572 7.29834 12.7617L14.1172 2.32471C14.21 2.17822 14.2783 2.03662 14.3223 1.8999C14.3662 1.76318 14.3882 1.63135 14.3882 1.50439C14.3882 1.1626 14.2734 0.879395 14.0439 0.654785C13.8145 0.430176 13.5239 0.317871 13.1724 0.317871C12.9331 0.317871 12.7305 0.366699 12.5645 0.464355C12.4033 0.557129 12.2471 0.718262 12.0957 0.947754L6.11182 10.4033L3.06494 6.63135C2.80615 6.31396 2.48145 6.15527 2.09082 6.15527C1.73926 6.15527 1.44629 6.27002 1.21191 6.49951C0.982422 6.72412 0.867676 7.00977 0.867676 7.35645C0.867676 7.50781 0.894531 7.6543 0.948242 7.7959C1.00195 7.9375 1.09473 8.08398 1.22656 8.23535L5.00586 12.813C5.30859 13.1743 5.68701 13.355 6.14111 13.355Z"
+                fill="#8D9886"
+              />
+            </svg>
+            <span
+              class="text-[12px] font-bold"
+            >
+              Interior & Exterior
+            </span>
+          </div>
+          <div
+            class="flex justify-start items-center mr-4"
+            data-testid="plan-category"
+          >
+            <svg
+              class="mr-[8px]"
+              fill="none"
+              height="14"
+              viewBox="0 0 15 14"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.14111 13.355C6.64404 13.355 7.02979 13.1572 7.29834 12.7617L14.1172 2.32471C14.21 2.17822 14.2783 2.03662 14.3223 1.8999C14.3662 1.76318 14.3882 1.63135 14.3882 1.50439C14.3882 1.1626 14.2734 0.879395 14.0439 0.654785C13.8145 0.430176 13.5239 0.317871 13.1724 0.317871C12.9331 0.317871 12.7305 0.366699 12.5645 0.464355C12.4033 0.557129 12.2471 0.718262 12.0957 0.947754L6.11182 10.4033L3.06494 6.63135C2.80615 6.31396 2.48145 6.15527 2.09082 6.15527C1.73926 6.15527 1.44629 6.27002 1.21191 6.49951C0.982422 6.72412 0.867676 7.00977 0.867676 7.35645C0.867676 7.50781 0.894531 7.6543 0.948242 7.7959C1.00195 7.9375 1.09473 8.08398 1.22656 8.23535L5.00586 12.813C5.30859 13.1743 5.68701 13.355 6.14111 13.355Z"
+                fill="#8D9886"
+              />
+            </svg>
+            <span
+              class="text-[12px] font-bold"
+            >
+              Eaves
+            </span>
+          </div>
+          <div
+            class="flex justify-start items-center mr-4"
+            data-testid="plan-category"
+          >
+            <svg
+              class="mr-[8px]"
+              fill="none"
+              height="14"
+              viewBox="0 0 15 14"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.14111 13.355C6.64404 13.355 7.02979 13.1572 7.29834 12.7617L14.1172 2.32471C14.21 2.17822 14.2783 2.03662 14.3223 1.8999C14.3662 1.76318 14.3882 1.63135 14.3882 1.50439C14.3882 1.1626 14.2734 0.879395 14.0439 0.654785C13.8145 0.430176 13.5239 0.317871 13.1724 0.317871C12.9331 0.317871 12.7305 0.366699 12.5645 0.464355C12.4033 0.557129 12.2471 0.718262 12.0957 0.947754L6.11182 10.4033L3.06494 6.63135C2.80615 6.31396 2.48145 6.15527 2.09082 6.15527C1.73926 6.15527 1.44629 6.27002 1.21191 6.49951C0.982422 6.72412 0.867676 7.00977 0.867676 7.35645C0.867676 7.50781 0.894531 7.6543 0.948242 7.7959C1.00195 7.9375 1.09473 8.08398 1.22656 8.23535L5.00586 12.813C5.30859 13.1743 5.68701 13.355 6.14111 13.355Z"
+                fill="#8D9886"
+              />
+            </svg>
+            <span
+              class="text-[12px] font-bold"
+            >
+              Re-services at no cost
+            </span>
+          </div>
+          <div
+            class="flex justify-start items-center mr-4"
+            data-testid="plan-category"
+          >
+            <svg
+              class="mr-[8px]"
+              fill="none"
+              height="14"
+              viewBox="0 0 15 14"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.14111 13.355C6.64404 13.355 7.02979 13.1572 7.29834 12.7617L14.1172 2.32471C14.21 2.17822 14.2783 2.03662 14.3223 1.8999C14.3662 1.76318 14.3882 1.63135 14.3882 1.50439C14.3882 1.1626 14.2734 0.879395 14.0439 0.654785C13.8145 0.430176 13.5239 0.317871 13.1724 0.317871C12.9331 0.317871 12.7305 0.366699 12.5645 0.464355C12.4033 0.557129 12.2471 0.718262 12.0957 0.947754L6.11182 10.4033L3.06494 6.63135C2.80615 6.31396 2.48145 6.15527 2.09082 6.15527C1.73926 6.15527 1.44629 6.27002 1.21191 6.49951C0.982422 6.72412 0.867676 7.00977 0.867676 7.35645C0.867676 7.50781 0.894531 7.6543 0.948242 7.7959C1.00195 7.9375 1.09473 8.08398 1.22656 8.23535L5.00586 12.813C5.30859 13.1743 5.68701 13.355 6.14111 13.355Z"
+                fill="#8D9886"
+              />
+            </svg>
+            <span
+              class="text-[12px] font-bold"
+            >
+              Foundation
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full flex flex-wrap gap-5 justify-center mt-6 mb-[15px]"
+      />
+      <div
+        class="w-full text-end text-[12px] italic text-[#6B7280]"
+      >
+        *Frequency of treatments will vary depending on time of year and other factors.
+      </div>
+      <div
+        class="w-full flex justify-center items-center"
+      >
+        <button
+          class="customButton text-white bg-aptive-900 hover:bg-gray-400 disabled:bg-gray-50 disabled:border-none disabled:text-gray-400 pt-2 pb-2 pl-6 pr-6 border text-sm rounded shadow-sm block text-center undefined"
+          data-testid="button"
+          type="submit"
+        >
+          Next: Select Additional Services
+        </button>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

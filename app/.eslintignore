@@ -1,0 +1,8 @@
+build
+coverage/**
+**/*.d.ts
+*.config.js
+*.config.*.js
+public/mockServiceWorker.js
+mocks/index.js
+

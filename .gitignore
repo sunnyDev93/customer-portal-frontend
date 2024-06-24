@@ -1,0 +1,4 @@
+# IDE
+.idea/
+.vcs/
+auth.json
