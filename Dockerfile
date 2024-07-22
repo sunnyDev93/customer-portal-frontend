@@ -1,4 +1,4 @@
-FROM node:14.15.4-alpine
+FROM node:22.5.1-alpine
 
 WORKDIR /customer-portal-frontend/app
 
